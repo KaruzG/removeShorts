@@ -4,12 +4,12 @@
     "version": "1.0.0",
     "description": "Fed up of being surrounded by dopamine machines? You can't handle the urge of clicking it? Just remove them from YouTube whit this extension.",
     "icons": {
-      "48": "images/removeShorts48.png",
-      "128": "images/removeShorts128.png"
+      "48": "src/images/removeShorts48.png",
+      "128": "src/images/removeShorts128.png"
     },
     "author": "josemiguelcpcs@gmail.com",
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "src/popup.html"
     },
     "permissions": [
         "scripting"
@@ -18,7 +18,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["entryPoint.js"]
+            "js": ["build/index.js"]
         }
     ]
   }
