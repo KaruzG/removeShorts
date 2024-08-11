@@ -14,11 +14,12 @@
     "permissions": [
         "scripting"
     ],
-    "host_permissions": ["https://youtube.com/*"],
+    "host_permissions": ["https://*.youtube.com/*"],
     "content_scripts": [
         {
-            "matches": ["<all_urls>"],
-            "js": ["build/index.js"]
+            "matches": ["https://*.youtube.com/*"],
+            "js": ["build/index.js"],
+            "css": ["src/css/shortsBlockingRules.css"]
         }
     ]
   }
